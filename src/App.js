@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import pokemon from 'pokemontcgsdk';
 import {pokeCard} from "../src/utils/consts"
-pokemon.configure({apiKey: 'ee65b96f-867a-4a73-95e0-5274015cacc1'})
+pokemon.configure({apiKey: '###'})
 
 function App() {
   const [card,setCard]=useState();
