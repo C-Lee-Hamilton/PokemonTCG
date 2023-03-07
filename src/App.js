@@ -1,44 +1,24 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-import pokemon from 'pokemontcgsdk';
-import {pokeCard} from "../src/utils/consts"
-pokemon.configure({apiKey: '###'})
 
 function App() {
-  const [card,setCard]=useState();
-  const [number,setNumber]=useState(69);
-  
 
+  const [number,setNumber]=useState(1);
+  
   const rando=()=>{
-   
-    setNumber(Math.floor(Math.random() * 102) + 1);
+   setNumber(Math.floor(Math.random() * 102) + 1);
     console.log(number);
-    
   }
-
-
-  useEffect(() => {
-  const fetchCard = async () => {
-    fetch(`${pokeCard}/cards/base1-${number}`)
-    .then(r=> r.json())
-  .then(data => {
-      setCard(data.data.images.small);
-  
-  })
-};
-fetchCard();
-  },[])
-
-
+  const card= `https://images.pokemontcg.io/base1/${number}.png`;
 
   return (
     <div className="App">
-    <h2>Pokemon TCG Open Packs</h2>
-    To click the card and get a new card,
-    eventually making it drastically more advanced
-
-    <br/>
-    <img onClick={rando} src={card} alt="thiscard"/>
+    
+      <h2>Pokemon TCG Open Packs</h2>
+        Welp, I didnt need the API to do what I wanted, so this is scrapped as an API project, 
+        but I still plan to do my original app
+      <br/>
+      <img onClick={rando} src={card} alt="thiscard"/>
     
     </div>
 
