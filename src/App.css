@@ -1,9 +1,121 @@
+body {
+  text-align: center;
+  background-size: cover;
 
+  background-image: url("./assets/images/steel6.jpg");
+}
 
-img{max-width: 150px;
-    }
-.tiny{max-width:50px;
-    padding-left:10px;
-  
-  
-};
+img {
+  max-width: 150px;
+}
+
+.viewer {
+  margin-right: 20px;
+  max-width: 150px;
+  border: grey outset 8px;
+  margin-top: -11px;
+}
+h4 {
+  margin-top: 0px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  border: black ridge 4px;
+  background-color: rgb(152, 152, 152);
+  color: rgb(0 0 0 / 60%);
+}
+
+h3 {
+  margin-bottom: 40px;
+  border: black outset 8px;
+  background-color: rgb(152, 152, 152);
+}
+h2 {
+  border: black outset 10px;
+  background-color: rgb(152, 152, 152);
+  margin-bottom: -19px;
+}
+.cardbox {
+  border: rgba(215, 212, 212, 0.786) inset 10px;
+  background-image: linear-gradient(
+    rgb(41, 45, 82),
+    rgb(41, 41, 235),
+    rgba(6, 45, 129, 0.986)
+  );
+  float: left;
+  margin-top: -30px;
+  margin-left: -10px;
+  padding-right: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 20px;
+}
+.tiny {
+  max-width: 50px;
+  padding-left: 10px;
+}
+
+button {
+  margin-top: 426%;
+  margin-left: 574%;
+  background-image: linear-gradient(darkblue, blue, rgb(0, 51, 255), darkblue);
+  color: rgb(27, 27, 17);
+  border-radius: 5%;
+  height: 69.5px;
+  width: 49.75px;
+  border: rgb(217, 189, 2) solid 3px;
+  color: rgb(255, 209, 81);
+  text-shadow: 1.5px 1.5px rgb(0, 0, 0), -1.5px 1.5px rgb(0, 0, 0),
+    1.5px -1.5px rgb(0, 0, 0), -1.5px -1.5px rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 1em;
+  position: flex;
+  padding: -30%;
+}
+/* sliderbar */
+
+.horizontal-slider {
+  width: 100%;
+  max-width: 150px;
+}
+
+.example-thumb {
+  cursor: pointer;
+  position: absolute;
+  z-index: 100;
+  background: #a6a6a6;
+  border: 4px outset #757575;
+  border-radius: 10%;
+  display: block;
+  box-shadow: 0 0 2px 0 rgb(0 0 0 / 44%);
+  margin-left: 10px;
+}
+
+.example-thumb.active {
+  background-color: rgb(10, 56, 205);
+  border: 4px outset #0e58e1;
+  margin-left: 10px;
+}
+
+.example-track {
+  margin-left: 10px;
+  position: relative;
+  background: #949393bc;
+}
+
+.example-track.example-track-0 {
+  background: #c6c4c4;
+}
+
+.horizontal-slider .example-track {
+  top: 8px;
+  height: 8px;
+}
+
+.horizontal-slider .example-thumb {
+  top: 3px;
+
+  width: 30px;
+  outline: none;
+  height: 10px;
+  line-height: 38px;
+}
