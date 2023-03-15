@@ -1,0 +1,25 @@
+import "../App.css";
+
+export const CardGrid = (props) => {
+  const { cards, cardIndex } = props;
+
+  return (
+    <div style={{ textAlign: "center" }}>
+      <div className="cardbox">
+        {cards.map((card, index) => (
+          <>
+            <img
+              className="tiny"
+              src={`https://images.pokemontcg.io/base1/${
+                index < cardIndex ? card : 0
+              }.png`}
+              style={index + 1 === cards.length ? { marginLeft: "33%" } : {}}
+              alt="thiscard"
+            />
+            {(index + 1) % 3 === 0 && <br />}
+          </>
+        ))}
+      </div>
+    </div>
+  );
+};
