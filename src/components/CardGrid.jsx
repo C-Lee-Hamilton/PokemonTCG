@@ -1,7 +1,8 @@
 import "../App.css";
+import useState from "react";
 
 export const CardGrid = (props) => {
-  const { cards, cardIndex } = props;
+  const { cards, cardIndex, setSauce } = props;
 
   return (
     <div style={{ textAlign: "center" }}>
@@ -9,6 +10,9 @@ export const CardGrid = (props) => {
         {cards.map((card, index) => (
           <>
             <img
+              onClick={() => {
+                setSauce(card);
+              }}
               className="tiny"
               src={`https://images.pokemontcg.io/base1/${
                 index < cardIndex ? card : 0

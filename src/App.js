@@ -5,6 +5,7 @@ import "./App.css";
 
 function App() {
   const [cardIndex, setCardIndex] = useState(-1);
+
   const [cards, setCards] = useState(
     Array.from({ length: 11 }, () => Math.floor(Math.random() * 102) + 1)
   );
@@ -12,7 +13,7 @@ function App() {
   const nextCard = () => {
     cardIndex < cards.length && setCardIndex(cardIndex + 1);
   };
-
+  const [sauce, setSauce] = useState(0);
   const reset = () => {
     setCardIndex(-1);
     setCards(
@@ -28,12 +29,14 @@ function App() {
       </div>
 
       <Display
-        cardSrc={`https://images.pokemontcg.io/base1/${cards[cardIndex]}.png`}
+        cardSrc={`https://images.pokemontcg.io/base1/${
+          cardIndex < cards.length ? cards[cardIndex] : sauce
+        }.png`}
         nextCard={nextCard}
         cardIndex={cardIndex}
       />
 
-      <CardGrid cardIndex={cardIndex} cards={cards} />
+      <CardGrid cardIndex={cardIndex} setSauce={setSauce} cards={cards} />
       <div style={{ position: "absolute" }}>
         <button onClick={reset}>
           New <br />
